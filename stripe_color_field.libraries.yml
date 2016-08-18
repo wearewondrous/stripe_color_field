@@ -1,0 +1,7 @@
+select:
+  version: VERSION
+  css:
+    theme:
+      css/stripe_color.css: {}
+  js:
+    js/stripe_color.js: {}

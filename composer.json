@@ -1,0 +1,14 @@
+{
+  "name": "drupal/stripe_color_field",
+  "type": "drupal-module",
+  "description": "Special Dropdown to indicate color of a dropdown.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/WondrousLLC/stripe_color_field",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/WondrousLLC/stripe_color_field/issues",
+    "source": "https://github.com/WondrousLLC/stripe_color_field.git"
+  },
+  "require": { }
+}

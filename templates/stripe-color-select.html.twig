@@ -1,0 +1,49 @@
+{#
+/**
+ * @file
+ * Theme override for a select element.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the select tag.
+ * - options: The option element children.
+ *
+ * @see template_preprocess_select()
+ */
+#}
+{{ attach_library('stripe_color_field/select') }}
+{% set selected_color = '#fff' %}
+
+<div class="stripe-color-wrapper">
+  {% spaceless %}
+    <select{{ attributes }}>
+      {% for option in options %}
+        {% if option.type == 'optgroup' %}
+          <optgroup label="{{ option.label }}">
+            {% for sub_option in option.options %}
+              {% set color_code = custom_colors_config[sub_option.value]['code'] %}
+              <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}
+                      data-color-code="{{ color_code }}">
+                {{ sub_option.label }}
+              </option>
+              {% if sub_option.selected %}
+                {% set selected_color = color_code %}
+              {% endif %}
+            {% endfor %}
+          </optgroup>
+        {% elseif option.type == 'option' %}
+          {% set color_code = custom_colors_config[option.value]['code'] %}
+          <option value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}
+                  data-color-code="{{ color_code }}">
+            {{ option.label }}
+          </option>
+          {% if option.selected %}
+            {% set selected_color = color_code %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </select>
+  {% endspaceless %}
+  <div class="stripe-color-indicator" style="background-color: {{ selected_color }}">
+    &nbsp;
+  </div>
+</div>

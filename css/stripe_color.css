@@ -1,0 +1,23 @@
+.stripe-color-wrapper select {
+  display: block;
+  min-width: 6rem;
+  float: left;
+}
+
+.stripe-color-wrapper:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.stripe-color-indicator {
+  display: block;
+  float: left;
+  background-color: white;
+  width: 6rem;
+  height: 1.5rem;
+  border: 1px solid black;
+  box-shadow: inset 0 0 0 1px white;
+  margin-left: .5rem;
+  box-sizing: border-box;
+}

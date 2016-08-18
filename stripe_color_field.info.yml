@@ -1,0 +1,6 @@
+name: 'Stripe Color Field'
+type: module
+description: 'Special Dropdown to indicate color of a stripe.'
+core: 8.x
+package: WONDROUS
+configure: stripe_color_field.settings

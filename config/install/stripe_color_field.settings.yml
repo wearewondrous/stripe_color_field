@@ -1,0 +1,5 @@
+custom:
+  -
+    key: white
+    display_name: 'White'
+    code: '#ffffff'
