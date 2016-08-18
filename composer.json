@@ -1,5 +1,5 @@
 {
-  "name": "drupal/stripe_color_field",
+  "name": "wondrousllc/stripe_color_field",
   "type": "drupal-module",
   "description": "Special Dropdown to indicate color of a dropdown.",
   "keywords": ["Drupal"],
