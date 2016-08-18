@@ -4,7 +4,10 @@ Drupal 8 module. Special Dropdown to indicate color of a stripe.
 
 # Usage
 
-After install you will find a ne field Type. Use as desired. We normally add it to a Paragraph called stripe.
+After install you will find a new field Type. Use as desired.
+Go to the settings page `/admin/config/content/stripe_color_field` and add the needed colors.
+
+We normally add the new field named `Stripe Color` to a Paragraph called `Stripe`.
 Then in the `paragraph--stripe.html.twig` we put the following:
 
 ``` twig
