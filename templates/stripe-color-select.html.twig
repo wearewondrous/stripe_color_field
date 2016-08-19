@@ -23,7 +23,7 @@
               {% set color_code = custom_colors_config[sub_option.value]['code'] %}
               <option value="{{ sub_option.value }}"{{ sub_option.selected ? ' selected="selected"' }}
                       data-color-code="{{ color_code }}">
-                {{ sub_option.label }}
+                {% trans %}{{ sub_option.label }}{% endtrans %}
               </option>
               {% if sub_option.selected %}
                 {% set selected_color = color_code %}
@@ -34,7 +34,7 @@
           {% set color_code = custom_colors_config[option.value]['code'] %}
           <option value="{{ option.value }}"{{ option.selected ? ' selected="selected"' }}
                   data-color-code="{{ color_code }}">
-            {{ option.label }}
+            {% trans %}{{ option.label }}{% endtrans %}
           </option>
           {% if option.selected %}
             {% set selected_color = color_code %}
