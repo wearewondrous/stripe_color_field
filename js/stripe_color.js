@@ -1,27 +1,29 @@
-document.addEventListener('DOMContentLoaded', function () {
+jQuery(function ($) {
   'use strict';
 
-  var wrapper = document.querySelectorAll('.stripe-color-wrapper');
+  function init() {
+    var $wrappers = $('.stripe-color-wrapper');
 
-  if (!wrapper) {
-    return;
+    if (!$wrappers.length) {
+      return;
+    }
+
+    $wrappers.each(function () {
+      var select = this.querySelector('select');
+      var indicator = this.querySelector('.stripe-color-indicator');
+      var options = {};
+
+      [].forEach.call(select.options, function (item) {
+        options[item.value] = item.getAttribute('data-color-code');
+      });
+
+      $(select).on('change', function () {
+        indicator.style.backgroundColor = options[this.value];
+      });
+    });
   }
 
-  function addEvent(el, type, handler) {
-    if (el.attachEvent) el.attachEvent('on' + type, handler); else el.addEventListener(type, handler);
-  }
+  init();
 
-  [].forEach.call(wrapper, function (item) {
-    var select = item.querySelector('select');
-    var indicator = item.querySelector('.stripe-color-indicator');
-    var options = {};
-
-    [].forEach.call(select.options, function (item) {
-      options[item.value] = item.getAttribute('data-color-code');
-    });
-
-    addEvent(select, 'change', function () {
-      indicator.style.backgroundColor = options[this.value];
-    });
-  });
+  $(document).ajaxComplete(init);
 });
