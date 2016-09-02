@@ -24,6 +24,16 @@ Then in the `paragraph--stripe.html.twig` we put the following:
 
 ```
 
+# Demo Screen
+
+When placed into a field, it looks like this:
+
+![](docs/stripe-color-field-demo.gif)
+
+Backend settings page
+
+![](docs/stripe-color-field-select-page.png)
+
 # Credits
 
 code base: [github.com/WondrousLLC/stripe_color_field](https://github.com/WondrousLLC/stripe_color_field/)
