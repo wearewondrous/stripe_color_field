@@ -1,8 +1,8 @@
-jQuery(function ($) {
+(function ($, Drupal) {
   'use strict';
 
-  function init() {
-    var $wrappers = $('.stripe-color-wrapper');
+  function init(context) {
+    var $wrappers = $('.stripe-color-wrapper', context);
 
     if (!$wrappers.length) {
       return;
@@ -23,7 +23,7 @@ jQuery(function ($) {
     });
   }
 
-  init();
-
-  $(document).ajaxComplete(init);
-});
+  Drupal.behaviors.stripeColorField = {
+    attach: init
+  };
+})(jQuery, Drupal);
