@@ -4,6 +4,6 @@ stripe_color_field.settings:
     _form: '\Drupal\stripe_color_field\Form\StripeColorsForm'
     _title: 'Settings for Stripe Colors'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
