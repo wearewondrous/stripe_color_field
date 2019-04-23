@@ -36,6 +36,6 @@ Backend settings page
 
 # Credits
 
-code base: [github.com/WondrousLLC/stripe_color_field](https://github.com/WondrousLLC/stripe_color_field/)
+code base: [github.com/wearewondrous/stripe_color_field](https://github.com/wearewondrous/stripe_color_field/)
 
 developed by [WONDROUS LLC](https://www.wearewondrous.com/)
